@@ -27,6 +27,7 @@ yarn create react-app . --template typescript
 
 2. Instalar o styled-components
 yarn add styled-components
+yarn add @types/styled-components
 
 3. Instalar o react-router-dom
 yarn add react-router-dom
@@ -37,3 +38,7 @@ yarn add react-router-dom
 * Components
 * Pages
 
+6. Criar pastas e arquivos iniciais dos componentes
+* Header
+* Input
+* Product
