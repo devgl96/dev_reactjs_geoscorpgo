@@ -1,9 +1,18 @@
-import { Container } from "./styles";
+import { HeaderProject } from "./styles";
+
+import { Link } from "react-router-dom";
 
 export function Header() {
   return (
-    <Container>
-      <h1>Header</h1>
-    </Container>
+    <HeaderProject>
+      <ul>
+        <li>
+          <Link to="/">Listagem</Link>
+        </li>
+        <li>
+          <Link to="/Cadastro">Cadastro</Link>
+        </li>
+      </ul>
+    </HeaderProject>
   )
 }
