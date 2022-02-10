@@ -17,6 +17,11 @@ export const Container = styled.div`
     border-radius: 5px;
 
     padding-left: 1rem;
+
+    background-image: url("https://images.emojiterra.com/google/android-11/512px/1f50e.png");
+    background-position: 520px 10px;
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
   }
 `;
 
