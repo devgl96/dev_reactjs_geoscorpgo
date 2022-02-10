@@ -1,68 +1,47 @@
-import axios from "axios";
-import { useEffect, useState } from "react";
-import { Header } from "../../components/Header";
+import { useState } from "react";
+
 import { Product } from "../../components/Product";
 
-interface Product {
-  id: number;
-  name: string;
-  description: string;
-  image_url: string;
-};
+import { useProducts } from "../../hooks/useProducts";
+
+import { Container, ListProducts } from "./styles";
 
 export function Listagem() {
-  // Transformar em variável de ambiente
-  // const URL_PUNK_API = "https://api.punkapi.com/v2/";
-  const [products, setProducts] = useState<Product[]>([]);
+  const {products} = useProducts();
+  
   const [searchProduct, setSearchProduct] = useState("");
-
-  useEffect(() => {
-    async function getInfo() {
-      await axios
-        .get("https://api.punkapi.com/v2/beers")
-        .then((response) => setProducts(response.data));
-      // console.log("getProductsInfo: ", getProductsInfo);
-    }
-
-    getInfo();
-  }, [products]);
-
-  // console.log("Products: ", products);
-
-  // console.log("SearchInput: ", searchProduct);
-
+  
   return (
     <>
-      <div>
-        <h1>Catálogo</h1>
+      <Container>
+        <h1>Listagem</h1>
         <input
           type="text"
-          placeholder="Faça a sua pesquisa aqui"
+          placeholder="Pesquisar"
           onChange={(e) => setSearchProduct(e.target.value)}
         />
-        <Product />
-        {products.map((product) => {
-          if (
-            product.name.toUpperCase().includes(searchProduct.toUpperCase()) ||
-            product.description
-              .toUpperCase()
-              .includes(searchProduct.toUpperCase())
-          ) {
-            return (
-              <div key={product.id}>
-                <img
-                  width="150"
-                  height="150"
-                  src={product.image_url}
-                  alt={product.name}
+        
+        <ListProducts>
+          {products.map((product) => {
+            if (
+              product.name.toUpperCase().includes(searchProduct.toUpperCase()) ||
+              product.description
+                .toUpperCase()
+                .includes(searchProduct.toUpperCase())
+            ) {
+              return (
+                <Product 
+                  key={product.id}
+                  id={product.id}
+                  image_url={product.image_url}
+                  name={product.name}
+                  description={product.description}
                 />
-                <h1>{product.name}</h1>
-                <p>{product.description}</p>
-              </div>
-            );
-          }
-        })}
-      </div>
+              );
+            }
+          })}
+        </ListProducts>
+      </Container>
     </>
   );
 }
