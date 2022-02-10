@@ -34,21 +34,17 @@ yarn add react-router-dom
 
 4. Limpar o projeto 
 
-5. Criar uma nova estrutura para o projeto
-* Components
-* Pages
+5. Seguintes objetivos foram traçados:
+- Criar a página Cadastro para poder listar todos os produtos 
+que estão na API. 
+- Criar um componente para ser o cabeçalho (Header).
+- Criar rotas para navegar em toda a aplicação por meio do menu no cabeçalho (Header).
+- Criar um componente produto para ser usado na listagem de produtos da API.
+- Criar a página cadastro para criar novos produtos e salvar no estado. 
+- Criar um contexto para que todos os produtos e as funcionalidades de adicionar e remover produtos possam ser acessadas em qualquer lugar da aplicação. 
+- Criar função para adicionar e excluir produto. 
+- Adicionar as funções nos seus devidos lugares: Adicionar produto na página de Cadastro e remover produto no componente Produto.
 
-6. Criar pastas e arquivos iniciais dos componentes
-* Header
-* Input
-* Product
+6. Projeto concluído com sucesso. 
 
-7. Criar pastas e arquivos iniciais das páginas
-* Listagem
-* Cadastro
-
-8. Desenvolver a página "Listagem"
-
-9. Desenvolver o componente "Header"
-
-10. Desenvolver o componente "Product"
+### Deus é bom o tempo todo.
