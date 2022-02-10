@@ -42,3 +42,13 @@ yarn add react-router-dom
 * Header
 * Input
 * Product
+
+7. Criar pastas e arquivos iniciais das páginas
+* Listagem
+* Cadastro
+
+8. Desenvolver a página "Listagem"
+
+9. Desenvolver o componente "Header"
+
+10. Desenvolver o componente "Product"
