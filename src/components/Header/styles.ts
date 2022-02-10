@@ -1,14 +1,24 @@
 import styled from "styled-components";
 
 export const HeaderProject = styled.header`
-  background: #333;
+  background: var(--primary-color);
 
   height: 5rem;
 
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
+
+  img {
+    background: #FFF;
+    border-radius: 100%;
+
+    width: 40px;
+    height: 40px;
+
+    margin-left: 10rem;
+  }
   
   ul {
     padding: 0.5rem 5rem;
@@ -26,10 +36,17 @@ export const HeaderProject = styled.header`
         color: #fff;
 
         &:hover {
-          color: #143434;
+          color: var(--fifth-color);
+        }
+      }
+
+      &.activePage {
+        a {
+          padding-bottom: 2px;
+          border-bottom: 2px solid var(--fifth-color);
+          color: var(--fifth-color);
         }
       }
     }
   }
-
 `;
