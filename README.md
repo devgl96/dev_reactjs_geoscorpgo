@@ -1,4 +1,5 @@
-# Oportunidade Dev ReactJS GeosCorpGo
+# Oportunidade Dev ReactJS GesCorpGo
+![Snapshot from project by GesCorpoGo Challenge](/design/dev_reactjs_gescorpgo/)
 
 ## Aplicação
 Desenvolver um catálogo para exibir uma lista de produtos geradas a partir da API disponibilizada. 
